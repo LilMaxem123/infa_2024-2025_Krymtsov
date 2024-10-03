@@ -5,18 +5,18 @@ pygame.init()
 FPS = 30
 screen = pygame.display.set_mode((600, 400))
 
-# Здесь мы будем рисовать
+# drawing
 
-# создадим функцию рисования слоев неба
-def DrawSky(col1, col2, col3, x1, y1, x2, y2):
+# sky layers
+def DrawSkyLayer(col1, col2, col3, x1, y1, x2, y2):
     rect(screen, (col1, col2, col3), (x1, y1, x2, y2))
 
 # нарисуем слои неба
-    
-DrawSky(250, 214, 165, 0, 0, 600, 75)
-DrawSky(222, 184, 135, 0, 75, 600, 75)
-DrawSky(244, 164, 96, 0, 150, 600, 75)
-DrawSky(188, 143, 143, 0, 225, 600, 175)
+def drawSky():   
+    DrawSkyLayer(250, 214, 165, 0, 0, 600, 75)
+    DrawSkyLayer(222, 184, 135, 0, 75, 600, 75)
+    DrawSkyLayer(244, 164, 96, 0, 150, 600, 75)
+    DrawSkyLayer(188, 143, 143, 0, 225, 600, 175)
 
 # создадим функцию рисования вершин гор
 def DrawMountain(col1, col2, col3, x1, y1, x2, y2, x3, y3):
